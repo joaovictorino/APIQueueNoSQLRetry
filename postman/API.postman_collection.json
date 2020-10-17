@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "a4af38b6-177e-4d94-afa7-3f074d09c5bd",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar Pedido",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order\": [\r\n        {\r\n            \"id\":1,\r\n            \"quantity\":1,\r\n            \"price\":5.00\r\n        },\r\n        {\r\n            \"id\":3,\r\n            \"quantity\":5,\r\n            \"price\":5.00\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://5000-f45ec8b0-583a-4ef7-83c3-db43166388f2.ws-us02.gitpod.io/order/finish",
+					"protocol": "https",
+					"host": [
+						"5000-f45ec8b0-583a-4ef7-83c3-db43166388f2",
+						"ws-us02",
+						"gitpod",
+						"io"
+					],
+					"path": [
+						"order",
+						"finish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Pedido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://5000-f45ec8b0-583a-4ef7-83c3-db43166388f2.ws-us02.gitpod.io/order/758069",
+					"protocol": "https",
+					"host": [
+						"5000-f45ec8b0-583a-4ef7-83c3-db43166388f2",
+						"ws-us02",
+						"gitpod",
+						"io"
+					],
+					"path": [
+						"order",
+						"758069"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Estoque",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://3000-f45ec8b0-583a-4ef7-83c3-db43166388f2.ws-us02.gitpod.io/products",
+					"protocol": "https",
+					"host": [
+						"3000-f45ec8b0-583a-4ef7-83c3-db43166388f2",
+						"ws-us02",
+						"gitpod",
+						"io"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decrementar Estoque",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"{\\\"id\\\" : 4,\\\"quantity\\\" : 1}\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://3000-f45ec8b0-583a-4ef7-83c3-db43166388f2.ws-us02.gitpod.io/product",
+					"protocol": "https",
+					"host": [
+						"3000-f45ec8b0-583a-4ef7-83c3-db43166388f2",
+						"ws-us02",
+						"gitpod",
+						"io"
+					],
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
